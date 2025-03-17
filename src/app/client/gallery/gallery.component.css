@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background: url("../../../assets/img/back5.jpg") center center;
+}
+
+input{
+    display: none;
+}
+.container{
+    width: 100%;
+    text-align: center;
+    
+
+}
+
+h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 10px 0 ;
+}
+
+h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #eedcdc;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+
+.top-content{
+    background-color: #eedcdc;
+    width: 90%;
+    margin: 0 auto 0px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgray;
+}
+
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: rgb(94, 94, 94);
+    cursor: pointer;
+    transition: color .5s;
+}
+
+label:hover{
+    color: rgb(184, 184, 184);
+}
+
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.pic{
+    position: relative;
+    height: 230px;
+    border-radius:10px ;
+    box-shadow: 3px 3px 5px lightgrey;
+    cursor: pointer;
+}
+
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius:10px ;
+
+}
+
+#check1:checked ~ .container .photo-gallery .pic{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+
+#check2:checked ~ .container .photo-gallery .charte{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+#check2:checked ~ .container .photo-gallery .habillage,
+#check2:checked ~ .container .photo-gallery .shooting,
+#check2:checked ~ .container .photo-gallery .personalise,
+#check2:checked ~ .container .photo-gallery .web,
+#check2:checked ~ .container .photo-gallery .packaging{
+
+    opacity: 0;
+    transform: scale(1);
+    position: absolute;
+    transition: 0s;
+ 
+}
+
+#check3:checked ~ .container .photo-gallery .packaging{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+#check3:checked ~ .container .photo-gallery .shooting,
+#check3:checked ~ .container .photo-gallery .personalise,
+#check3:checked ~ .container .photo-gallery .habillage,
+#check3:checked ~ .container .photo-gallery .web,
+#check3:checked ~ .container .photo-gallery .charte{
+
+    opacity: 0;
+    transform: scale(1);
+    position: absolute;
+    transition: 0s;
+ 
+}
+
+#check4:checked ~ .container .photo-gallery .habillage{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+#check4:checked ~ .container .photo-gallery .shooting,
+#check4:checked ~ .container .photo-gallery .personalise,
+#check4:checked ~ .container .photo-gallery .packaging,
+#check4:checked ~ .container .photo-gallery .web,
+#check4:checked ~ .container .photo-gallery .charte{
+
+    opacity: 0;
+    transform: scale(1);
+    position: absolute;
+    transition: 0s;
+ 
+}
+
+#check5:checked ~ .container .photo-gallery .shooting{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+#check5:checked ~ .container .photo-gallery .habillage,
+#check5:checked ~ .container .photo-gallery .personalise,
+#check5:checked ~ .container .photo-gallery .packaging,
+#check5:checked ~ .container .photo-gallery .web,
+#check5:checked ~ .container .photo-gallery .charte{
+
+    opacity: 0;
+    transform: scale(1);
+    position: absolute;
+    transition: 0s;
+ 
+}
+
+
+
+#check6:checked ~ .container .photo-gallery .personalise{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+#check6:checked ~ .container .photo-gallery .shooting,
+#check6:checked ~ .container .photo-gallery .habillage,
+#check6:checked ~ .container .photo-gallery .packaging,
+#check6:checked ~ .container .photo-gallery .web,
+#check6:checked ~ .container .photo-gallery .charte{
+
+    opacity: 0;
+    transform: scale(1);
+    position: absolute;
+    transition: 0s;
+ 
+}
+
+#check7:checked ~ .container .photo-gallery .web{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+#check7:checked ~ .container .photo-gallery .shooting,
+#check7:checked ~ .container .photo-gallery .habillage,
+#check7:checked ~ .container .photo-gallery .personalise,
+#check7:checked ~ .container .photo-gallery .packaging,
+#check7:checked ~ .container .photo-gallery .charte{
+
+    opacity: 0;
+    transform: scale(1);
+    position: absolute;
+    transition: 0s;
+ 
+}
